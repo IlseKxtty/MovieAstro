@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/home.css";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<h1 class="title">Welcome to the Movie Gallery</h1>
+		<p class="description">Explore our collection of movies!</p>
+  <div class="home-wrapper">
+    <a href="/ilse.html" class="button">
+      Go to Ilse Gallery
+    </a>
+    <a href="/angel.html" class="button">
+      Go to Angel Gallery
+    </a>
+</Layout>
+
+<style>
+	.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #2E2525, #575151);
+  overflow: hidden;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 500;
+  color: black;
+}
+
+.description {
+  font-size: 24px;
+  margin-top: -20px;
+  color: white;
+}
+
+.home-wrapper {
+  margin-top: 40px;
+  display: flex;
+  gap: 60px;
+}
+
+.button {
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  border: white 1px solid;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.15);
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+}
+</style>
