@@ -1,0 +1,175 @@
+---
+import Card from "../card.astro";
+import BeeatleJuice from "../../assets/images/image/beeatleJuice.png";
+import Miss from "../../assets/images/image/miss.png";
+import InsideOut from "../../assets/images/image/insideOut.png";
+import Coco from "../../assets/images/image/coco.png";
+import Maleficent from "../../assets/images/image/maleficent.png";
+import MonsterInc from "../../assets/images/image/monsterInc.png";
+import EdwardScissorhands from "../../assets/images/image/edwardScissorhands.png";
+import CorpseBride from "../../assets/images/image/corpseBride.png";
+import Frankenweenie from "../../assets/images/image/frankenweenie.png";
+import Night from "../../assets/images/image/night.png";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+const data = {
+  cardOne: {
+    image: BeeatleJuice,
+    title: "Beeatlejuice.",
+    director: "Autor:Tim-Burton.",
+    year: "Año: 1988.",
+    type: "Género: Comedia, Fantasía, Terror",
+    button: "Agregar a mis peliculas",
+  },
+
+  cardTwo: {
+    image: Miss,
+    title: "Miss-Peregrins.",
+    director: "Autor:Tim-Burton.",
+    year: "Año: 2016",
+    type: "Género: Aventura, Fantasía, Misterio.",
+    button: "Agregar a mis peliculas",
+  },
+
+  cardThree: {
+    image: InsideOut,
+    title: "Inside-Out.",
+    director: "Autor:Tim-Burton.",
+    year: "Año: 2015.",
+    type: "Género: Animación, Aventura, Comedia.",
+    button: "Agregar a mis peliculas",
+  },
+
+  cardFour: {
+    image: Coco,
+    title: "Coco.",
+    director: "Autor:Lee Unkrich, Adrian Molina.",
+    year: "Año: 2017.",
+    type: "Género: Animación, Aventura.",
+    button: "Agregar a mis peliculas",
+  },
+
+  cardFive: {
+    image: Maleficent,
+    title: "Maleficent.",
+    director: "Autor:Robert Stromberg.",
+    year: "Año: 2014.",
+    type: "Género: Aventura, Fantasía, Romance.",
+    button: "Agregar a mis peliculas",
+  },
+
+  cardSix: {
+    image: MonsterInc,
+    title: "Monster,Inc.",
+    director: "Autor:Pete Docter, David Silverman, Lee Unkrich.",
+    year: "Año: 2001.",
+    type: "Género: Animación, Aventura, Comedia.",
+    button: "Agregar a mis peliculas",
+  },
+
+  cardSeven: {
+    image: EdwardScissorhands,
+    title: "Edward-Scissorhands.",
+    director: "Autor:Tim-Burton.",
+    year: "Año: 1990.",
+    type: "Género: Fantasía, Romance, Drama.",
+    button: "Agregar a mis peliculas",
+  },
+
+  cardEight: {
+    image: CorpseBride,
+    title: "Corpse-Bride.",
+    director: "Autor:Tim-Burton.",
+    year: "Año: 2005.",
+    type: "Género: Animación, Fantasía, Romance.",
+    button: "Agregar a mis peliculas",
+  },
+
+  cardNine: {
+    image: Frankenweenie,
+    title: "Frankenweenie.",
+    director: "Autor:Tim-Burton.",
+    year: "Año: 2012.",
+    type: "Género: Animación, Comedia, Fantasía.",
+    button: "Agregar a mis peliculas",
+  },
+
+  cardTen: {
+    image: Night,
+    title: "The-Nightmare-Before-Christmas.",
+    director: "Autor:Henry Selick.",
+    year: "Año: 1993",
+    type: "Género: Animación, Fantasía, Musical.",
+    button: "Agregar a mis peliculas",
+  },
+  cardEleven: {
+    image: Night,
+    title: "The-Nightmare-Before-Christmas.",
+    director: "Autor:Henry Selick.",
+    year: "Año: 1993",
+    type: "Género: Animación, Fantasía, Musical.",
+    button: "Agregar a mis peliculas",
+  },
+  cardTweleven: {
+    image: Night,
+    title: "The-Nightmare-Before-Christmas.",
+    director: "Autor:Henry Selick.",
+    year: "Año: 1993",
+    type: "Género: Animación, Fantasía, Musical.",
+    button: "Agregar a mis peliculas",
+  },
+  cardThirteen: {
+    image: Night,
+    title: "The-Nightmare-Before-Christmas.",
+    director: "Autor:Henry Selick.",
+    year: "Año: 1993",
+    type: "Género: Animación, Fantasía, Musical.",
+    button: "Agregar a mis peliculas",
+  },
+  cardFourteen: {
+    image: Night,
+    title: "The-Nightmare-Before-Christmas.",
+    director: "Autor:Henry Selick.",
+    year: "Año: 1993",
+    type: "Género: Animación, Fantasía, Musical.",
+    button: "Agregar a mis peliculas",
+  },
+  cardFifteen: {
+    image: Night,
+    title: "The-Nightmare-Before-Christmas.",
+    director: "Autor:Henry Selick.",
+    year: "Año: 1993",
+    type: "Género: Animación, Fantasía, Musical.",
+    button: "Agregar a mis peliculas",
+  },
+};
+---
+
+<section>
+  <h2 class="text-white">{title}</h2>
+</section>
+<section class="section">
+  <Card {...data.cardOne} />
+  <Card {...data.cardTwo} />
+  <Card {...data.cardThree} />
+  <Card {...data.cardFour} />
+  <Card {...data.cardFive} />
+  <Card {...data.cardSix} />
+  <Card {...data.cardSeven} />
+  <Card {...data.cardEight} />
+  <Card {...data.cardNine} />
+  <Card {...data.cardTen} />
+</section>
+
+<style>
+  @reference "../../styles/global.css";
+
+  .section {
+    @apply gap-6 overflow-y-scroll max-w-[1536px] p-6 scroll-smooth flex;
+  }
+</style>
